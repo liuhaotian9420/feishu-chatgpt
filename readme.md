@@ -66,11 +66,11 @@
 
 ## 🌟 项目特点
 
-- 🍏 基于 OpenAI-[gpt-3.5-turbo](https://platform.openai.com/account/api-keys) 接口
-- 🍎 通过 lark，将 ChatGPT 接入[飞书](https://open.feishu.cn/app)
+- 🍏 对话基于 OpenAI-[gpt-3.5-turbo](https://platform.openai.com/account/api-keys) 接口
+- 🍎 通过 lark，将 ChatGPT 接入[飞书](https://open.feishu.cn/app)和[飞书国际版](https://www.larksuite.com/)
 - 🥒
   支持[Serverless 云函数](https://github.com/serverless-devs/serverless-devs)、[本地环境](https://dashboard.cpolar.com/login)、[Docker](https://www.docker.com/)、[二进制安装包](https://github.com/Leizhenpeng/feishu-chatgpt/releases/)
-  多种渠道部署
+  等多种渠道部署
 - 🍋 基于[goCache](https://github.com/patrickmn/go-cache)内存键值对缓存
 
 ## 项目部署
@@ -321,7 +321,8 @@ docker compose down
 <br>
 
 1. 进入[release 页面](https://github.com/Leizhenpeng/feishu-chatgpt/releases/) 下载对应的安装包
-2. 解压安装包,修改 config.example.yml 中配置信息,另存为 config.yml
+2. 解压安装包,修改 config.example.yml 中配置信息,另存为 config.yaml
+3. 目录下添加文件 `role_list.yaml`，自定义角色，可以从这里获取：[链接](https://github.com/Leizhenpeng/feishu-chatgpt/blob/master/code/role_list.yaml)
 3. 运行程序入口文件 `feishu-chatgpt`
 
 事件回调地址: http://IP:9000/webhook/event
@@ -351,7 +352,7 @@ docker compose down
     </p>
 </details>
 
-- 获取 [OpenAI](https://platform.openai.com/account/api-keys) 的 KEY
+- 获取 [OpenAI](https://platform.openai.com/account/api-keys) 的 KEY( 🙉 下面有免费的 KEY 供大家测试部署 )
 - 创建 [飞书](https://open.feishu.cn/) 机器人
     1. 前往[开发者平台](https://open.feishu.cn/app?lang=zh-CN)创建应用,并获取到 APPID 和 Secret
     2. 前往`应用功能-机器人`, 创建机器人
@@ -381,13 +382,24 @@ docker compose down
 
 更多介绍，参考[飞书上的小计算器: Go 机器人来啦](https://www.bilibili.com/video/BV12M41187rV/)
 
+## 免费 Openai_Key
+
+<a href='https://freeopenai.xyz/' >
+<img src='https://user-images.githubusercontent.com/50035229/229976556-99e8ac26-c8c3-4f56-902d-a52a7f2e50d5.png' alt='' width='330'/>
+</a>
+
+这里有些[免费的OpenAI Key](https://freeopenai.xyz/), 大家可测试使用。
+
+
 ## 更多交流
+
 
 如需协助部署，或者其他定制服务，可联系下面的WeChat，支持发票~
 
 遇到问题，可以加入飞书群沟通~
 
-<img src='./docs/talk.png' alt='' width='200'/>
+
+<img src='https://user-images.githubusercontent.com/50035229/229813025-516d09f7-7de3-46b5-8407-f0bbf8b44344.png' alt='' width='200'/>
 
 ## 交朋友 或者 鼓励一下
 
